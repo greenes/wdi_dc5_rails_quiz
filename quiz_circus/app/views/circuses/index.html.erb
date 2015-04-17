@@ -1,0 +1,11 @@
+<h2><%= link_to "Add a new circus", new_circus_path %> </h2>
+
+    <ul>
+
+      <p><% @circuses.each do |c| %>
+        <li><%=link_to "#{c.name}", circus_path(c.id)%></li>
+        <li><%= image_tag c.image_url %></li>
+
+      <%end%>
+
+    </ul>

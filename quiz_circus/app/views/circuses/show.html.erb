@@ -1,1 +1,13 @@
+  <%=link_to "All Circuses", circuses_path%>
+  <br>
+  <h1><%=@circus.name%></h1>
 
+  <ul>
+    <h2><% @entertainers.each do |e| %></h2>
+      <li><%="#{e.name} : #{e.specialty}"%></li>
+
+    <%end%>
+
+  </ul>
+
+  <h2><%= link_to "update this circus", edit_circus_path(@circus.id) %> </h2>
